@@ -13,9 +13,12 @@ O projeto foi feito para colocar em prática conceitos de agentes e de SQL, de m
 ## Arquitetura
 
 my-sql-agent/
-├── data/ # banco de dados SQLite (gerado localmente)
-└── src/
-└── database.py # cria as tabelas: Materiais, Clientes, Pesagens
+|-- data/ # BD SQLite (gerado localmente)
+    |-- clientes.csv
+    |-- materiais.csv
+    |-- pesagens.csv
+|--src/
+    |--database.py # cria as tabelas: Materiais, Clientes, Pesagens
 
 ## Como rodar (por enquanto)
 
@@ -24,7 +27,7 @@ my-sql-agent/
     python -m venv venv
     pip install -r requirements.txt
 
-2. Crie o banco de dados:
+2. Crie o BD:
     bash
     python -m src.database
 
@@ -33,9 +36,11 @@ my-sql-agent/
 
 - O preço foi separado em snapshots na pesagem, para que a alteração futura do preço do material não influencie em pesagens passadas
 - FOREIGN KEY com PRAGMA ativado para que não se adicione clientes ou materiais inexistentes
+- O programa utiliza os dados em CSV para alimentar o BD
+- database.py só pode ser rodado uma vez, o que impede inserir o mesmo dado novamente no BD
+- CSVs com dados inseridos no repositório com o objetivo de facilitar testes
 
 ## Próximos passos
 
-- Preencher o banco de dados com os materiais (Pó de pedra, Pedra britada 01, Pedra britada 02, Rachão, Calcário) e dados fictícios de clientes e pesagens
 - Implementar a API da Claude via function calling
 - Adicionar validação de segurança nas queries geradas pelo modelo
