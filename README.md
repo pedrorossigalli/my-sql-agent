@@ -39,8 +39,8 @@ my-sql-agent/
 - O programa utiliza os dados em CSV para alimentar o BD
 - database.py só pode ser rodado uma vez, o que impede inserir o mesmo dado novamente no BD
 - CSVs com dados inseridos no repositório com o objetivo de facilitar testes
+- Segurança via Regex para que as queries no banco de dados não contenham outra consulta a não ser SELECT
 
 ## Próximos passos
 
 - Implementar a API da Claude via function calling
-- Adicionar validação de segurança nas queries geradas pelo modelo
