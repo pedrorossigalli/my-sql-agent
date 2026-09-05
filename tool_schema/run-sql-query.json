@@ -1,0 +1,14 @@
+{
+    "name": "run_sql_query",
+    "description": "Enviar uma query para o banco de dados de SELECT",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "query": {
+                "type": "string",
+                "description": "Uma query SELECT no banco de dados, ex.: SELECT nome, preco_por_tonelada FROM Materiais"
+            }
+        },
+        "required": ["query"]
+    }
+}

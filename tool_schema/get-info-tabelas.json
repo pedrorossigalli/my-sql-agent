@@ -1,0 +1,9 @@
+{
+    "name": "get_info_tabelas",
+    "description": "Retornar as informações das tabelas do banco de dados",
+    "input_schema": {
+        "type": "object",
+        "properties": {}
+        },
+        "required": []
+}
