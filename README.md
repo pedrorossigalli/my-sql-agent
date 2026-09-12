@@ -8,17 +8,7 @@ O projeto foi feito para colocar em prática conceitos de agentes e de SQL, de m
 
 ## Status
 
-🔧 Em desenvolvimento.
-
-## Arquitetura
-
-my-sql-agent/
-|-- data/ # BD SQLite (gerado localmente)
-    |-- clientes.csv
-    |-- materiais.csv
-    |-- pesagens.csv
-|--src/
-    |--database.py # cria as tabelas: Materiais, Clientes, Pesagens
+Em desenvolvimento.
 
 ## Como rodar (por enquanto)
 
@@ -43,4 +33,4 @@ my-sql-agent/
 
 ## Próximos passos
 
-- Implementar a API da Claude via function calling
+- Criar main.py para que o usuario possa fazer varias perguntas ao modelo
